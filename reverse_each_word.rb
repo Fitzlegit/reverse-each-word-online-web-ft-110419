@@ -3,7 +3,5 @@ require 'pry'
 def reverse_each_word(msg)
   rev_msg = ""
   binding.pry
-  msg.split.each{|rev_word| rev_word.reverse}.join(" ")
-  rev_msg = rev_word
-  rev_msg
+  msg.split.collect{|rev_word| rev_word.reverse}.join(" ")
 end
